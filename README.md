@@ -1,2 +1,2 @@
 # Hi-Devs-projects
-Contains all program of Hi-Devs
+Contains all completed projects from Hi-Devs platform
