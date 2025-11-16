@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Translator</h1>
+    <p>Enter text in any language. It will be translated to English.</p>
+    
+    <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+    <button id="translateButton">Translate</button>
+    
+    <h3>Result:</h3>
+    <div id="result-container"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
