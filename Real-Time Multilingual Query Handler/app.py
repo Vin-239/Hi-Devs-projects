@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-# Import the new library
 from translate import Translator
 
 app = Flask(__name__)
@@ -34,4 +33,5 @@ def translate_text():
 
 if __name__ == '__main__':
     print("Server running at http://127.0.0.1:5000/")
+
     app.run(debug=True, port=5000)
