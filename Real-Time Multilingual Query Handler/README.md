@@ -39,7 +39,7 @@ Before running the Python code, follow the steps given below (Important):
     ```bash
     ollama pull phi3.5
     ```
-    * **Why this model?**  **Phi-3.5 Mini** is a "high-quality, reasoning-dense" model optimized for multilingual tasks. At only ~2.2GB, it fits easily on consumer hardware while outperforming larger models in language understanding benchmarks.
+    * **Why this model?**  **Phi-3.5:latest** is a "high-quality, reasoning-dense" model optimized for multilingual tasks. At only ~2.2GB, it fits easily on consumer hardware while outperforming larger models in language understanding benchmarks.
 
 ## Installation
 
@@ -83,4 +83,5 @@ Before running the Python code, follow the steps given below (Important):
     * **`index.html`** provides the core structure of the webpage.
     * **`style.css`** (from the `static` folder) provides all the visual styling.
     * **`script.js`** (from the `static` folder) contains the application logic. It listens for the "Translate" button click, sends the text to the Flask back-end using `fetch()`, and updates the webpage with the result without a full page reload.
+
 
