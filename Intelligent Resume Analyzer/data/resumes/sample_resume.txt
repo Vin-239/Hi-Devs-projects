@@ -1,0 +1,5 @@
+Name: A
+Email: a@example.com
+Education: BS of CS
+Experience: 2 years
+Skills: Python, SQL, Pandas

@@ -1,0 +1,17 @@
+[
+    {
+        "candidate_name": "A",
+        "email": "a@example.com",
+        "education": "BS of CS",
+        "experience_years": 2,
+        "job_title": "Python Dev",
+        "match_score": 90.0,
+        "matched_skills": [
+            "python",
+            "sql"
+        ],
+        "recommendation": "STRONGLY RECOMMENDED",
+        "ai_explanation": "Summary: The candidate received a score of 90.0/100 because they matched most of the required skills and had sufficient experience in those areas.\n\nStrengths:\n- python\n- sql\n\nGaps:\n- None",
+        "ai_interview_questions": "1. How do you handle a situation where a Python library or framework does not support the data structure you need to work with?\n2. Can you describe your experience working on a project that involved both Python and SQL, and how did you integrate them into your workflow?\n3. Write a Python function to optimize the query execution speed for a given SQL query."
+    }
+]

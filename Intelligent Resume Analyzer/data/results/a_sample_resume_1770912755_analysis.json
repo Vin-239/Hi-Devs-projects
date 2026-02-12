@@ -1,0 +1,17 @@
+[
+    {
+        "candidate_name": "A",
+        "email": "a@example.com",
+        "education": "BS of CS",
+        "experience_years": 2,
+        "job_title": "Python Dev",
+        "match_score": 90.0,
+        "matched_skills": [
+            "python",
+            "sql"
+        ],
+        "recommendation": "STRONGLY RECOMMENDED",
+        "ai_explanation": "Insight 1: The candidate has a strong balance of both required and matched skills, indicating they are well-equipped to handle the technical demands of the role. With experience in Python and SQL, this individual can quickly contribute to the team's projects without needing extensive onboarding or training.\n\nInsight 2: A specific risk is that while the candidate possesses solid foundational skills in Python and SQL, their proficiency with pandas might not be as developed since it was listed under 'Candidate Skills' but not 'Matched Skills'. This could pose a slight gap in advanced data manipulation tasks that may require deeper expertise in pandas.\n\nInsight 3: Based on the overlap of required and matched skills, this candidate would likely fit well into a team where Python and SQL are central to the development work. Their experience suggests they can seamlessly integrate with existing projects, potentially enhancing productivity and contributing effectively from day one.",
+        "ai_interview_questions": "1. [Conceptual Depth]: How would you design a Python-based microservices architecture to handle high concurrency and stateless operations, and what are the trade-offs involved in choosing between process-level versus thread-level parallelism for this scenario?\n2. [Scenario]: You're working on a financial trading application where latency is critical but there have been occasional issues with data consistency across multiple nodes. Describe a real-world situation where you encountered such an issue and how you resolved it.\n3. [Trade-off]: In the context of caching strategies in Python applications, explain when you would prefer using an in-memory cache versus a distributed cache like Redis, and discuss the implications on performance and scalability."
+    }
+]

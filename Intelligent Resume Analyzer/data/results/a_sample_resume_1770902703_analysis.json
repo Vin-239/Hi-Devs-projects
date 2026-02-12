@@ -1,0 +1,17 @@
+[
+    {
+        "candidate_name": "A",
+        "email": "a@example.com",
+        "education": "BS of CS",
+        "experience_years": 2,
+        "job_title": "Python Dev",
+        "match_score": 90.0,
+        "matched_skills": [
+            "python",
+            "sql"
+        ],
+        "recommendation": "STRONGLY RECOMMENDED",
+        "ai_explanation": "[Raw Output]\n===BEGIN ANALYSIS===\nSummary:\nThe candidate received a score of 90.0/100 because they matched the required skills of 'python' and 'sql', with an experience gap that is not explicitly mentioned.\n\nStrengths:\n- The candidate has matched both required skills: python and sql.\n- They also have relevant skills that were listed in their profile: pandas, which shares a connection to 'python'.\n\nGaps:\n- Primary missing skill or experience gap: None",
+        "ai_interview_questions": "1. How do you handle errors in a Python script, and what's your approach to debugging?\n2. Can you describe an instance where you had to optimize database queries using SQL? How did you do it?\n3. Suppose you're working on a project with a large dataset and need to perform data cleaning tasks. What steps would you take to ensure data integrity and quality?"
+    }
+]

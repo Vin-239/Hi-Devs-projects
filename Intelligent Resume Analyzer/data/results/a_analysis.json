@@ -1,0 +1,15 @@
+[
+    {
+        "candidate_name": "A",
+        "email": "a@example.com",
+        "education": "BS of CS",
+        "experience_years": 2,
+        "job_title": "Python Dev",
+        "match_score": 90.0,
+        "matched_skills": [
+            "python",
+            "sql"
+        ],
+        "recommendation": "STRONGLY RECOMMENDED"
+    }
+]
