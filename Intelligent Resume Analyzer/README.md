@@ -4,19 +4,16 @@
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-red)
 ![AI](https://img.shields.io/badge/AI-Local%20LLM%20(Ollama)-orange)
-![Status](https://img.shields.io/badge/Status-Capstone%20Complete-green)
 
 ---
 
 ## Overview
-The **Intelligent Resume Analyzer** is a **local, privacy-focused capstone project** that automates candidate screening by combining **deterministic Python logic** with **optional AI-driven qualitative insights**.
+The **Intelligent Resume Analyzer** is a **local, privacy-focused resume analyzer** that automates candidate screening by combining **deterministic Python logic** with **optional AI-driven qualitative insights**.
 
 The system is deliberately designed to avoid "black-box" decision-making:
 * **Deterministic Core:** All scoring and recommendations are computed using transparent, explainable Python rules.
 * **Advisory AI:** Generative AI is used *only* as an advisory layer for insights and interview preparation.
 * **Zero Bias:** AI output never alters scores or hiring decisions.
-
-*This project was developed as a capstone submission to demonstrate applied Python fundamentals, system design, and responsible AI integration.*
 
 ---
 
@@ -40,51 +37,56 @@ The system follows a linear, fault-tolerant pipeline designed for reproducibilit
 [AI Layer] Optional Insights & Interview Questions
            ↓
 [Output]   UI Display + JSON File Persistence
-Core Design Principles
-Deterministic Core: The same resume + the same job = the same score, every time.
+```
+---
 
-Fail-Soft AI: If the local LLM is unavailable, the system continues gracefully without crashing.
+## Core Design Principles
 
-Privacy-First: All data stays on the local machine. No cloud API calls are made.
+1. Deterministic Core: The same resume + the same job = the same score, every time.
 
-Syllabus-Aligned: Built using core Python concepts: lists, dictionaries, sets, conditionals, loops, and file I/O.
+2. Fail-Soft AI: If the local LLM is unavailable, the system continues gracefully without crashing.
 
-🛠️ Features & Technical Implementation
-1. Robust Resume Parsing
-Technique: Line-by-line string processing (split, strip, find).
+3. Privacy-First: All data stays on the local machine. No cloud API calls are made.
 
-Robustness: Handles missing fields, variable formatting, and whitespace anomalies.
+4. Built using core Python concepts: lists, dictionaries, sets, conditionals, loops, and file I/O.
 
-Concepts: Day 7 (Strings), Day 5 (Loops).
+---
 
-2. Smart Matching Engine
-Technique: Skill matching via set intersection; Experience & education checks using conditionals.
+## Features & Technical Implementation
 
-Weighting:
+1. Robust Resume Parsing: 
+   1. Technique: Line-by-line string processing (split, strip, find).
 
-Skills: 60%
+   2. Robustness: Handles missing fields, variable formatting, and whitespace anomalies.
 
-Experience: 30%
+2. Smart Matching Engine:
 
-Education: 10%
+   Technique: Skill matching via set intersection; Experience & education checks using conditionals.
 
-Concepts: Day 2 (Operators), Day 3 (Conditionals), Day 6 (Sets).
+   Weighting:
 
-3. AI Advisory Layer (Optional)
-Model: qwen2.5 via local Ollama.
+      1. Skills: 60%
 
-Purpose:
+      2. Experience: 30%
 
-Qualitative match insights (Risk/Growth analysis).
+      3. Education: 10%
 
-Deep, scenario-based interview questions.
+4. AI Advisory Layer (Optional):
 
-Safety: Prompt constraints prevent hallucination; AI never affects deterministic results.
+   Model: qwen2.5 via local Ollama.
 
-Concepts: Prompt Engineering, Subprocess Management.
+   Purpose:
 
-📂 Project Structure
-Plaintext
+      1. Qualitative match insights (Risk/Growth analysis).
+
+      2. Deep, scenario-based interview questions.
+
+      3. Safety: Prompt constraints prevent hallucination; AI never affects deterministic results.
+
+---
+ 
+## Project Structure
+```text
 resume_analyzer/
 │
 ├── app.py                  # Streamlit UI (Controller & View)
@@ -100,51 +102,64 @@ resume_analyzer/
 │   └── prompts.py          # Prompt Engineering Library
 │
 ├── data/
-│   ├── job_description.json
-│   └── results/            # Saved Analysis Files
-│
+│   ├── job_descriptions
+│   └── results             # Saved Analysis Files
+│   └── resumes
+|
 └── requirements.txt        # Python Dependencies
-
+```
 ---
-▶️ How to Run Locally
+
+## How to Run Locally
+
 Prerequisites
 Python 3.9+ installed.
 
 Ollama installed locally (required only for AI features).
 
+
 Step 1: Install Python Dependencies
-Bash
+```Bash
 pip install -r requirements.txt
+```
+
 Step 2: Setup Local AI (Optional)
 Pull the optimized reasoning model used for this project:
-
-Bash
+```Bash
 ollama pull qwen2.5
+```
 (Note: You can skip this step if you only require deterministic scoring.)
 
+
 Step 3: Launch the Application
-Bash
+```Bash
 streamlit run app.py
-🧪 Usage Guide
-Load Job: Upload a Job Description JSON or paste requirements directly.
+```
+---
 
-Upload Resumes: Select one or multiple .txt resume files.
+## Usage Guide
+1. Load Job: Upload one or more Job Description JSON or paste requirements directly.
 
-Toggle AI: Turn on "Qualitative Insights" or "Interview Questions" (optional).
+2. Upload Resumes: Select one or multiple .txt resume files.
 
-Analyze: Click Analyze Candidates.
+3. Toggle AI: Turn on "AI Insights" or "Interview Questions" (optional).
 
-View & Save: Expand detailed reports in the UI and find the persistent JSON output in data/results/.
+4. Analyze: Click Analyze Candidates.
 
-🛡️ Robustness & Safety
+5. View & Save: Expand detailed reports in the UI and find the persistent JSON output in data/results/.
+
+---
+
+## Robustness & Safety
 This project is engineered to handle edge cases:
 
-Filename Collisions: Auto-timestamps filenames to prevent overwriting data.
+1. Filename Collisions: Auto-timestamps filenames to prevent overwriting data.
 
-Bad Input: Validates JSON schema before processing.
+2. Bad Input: Validates JSON schema before processing.
 
-Encoding Issues: Gracefully handles non-UTF-8 characters in resumes.
+3. Encoding Issues: Gracefully handles non-UTF-8 characters in resumes.
 
-AI Timeout: Enforces strict timeouts on LLM calls to prevent UI hanging.
+4. AI Timeout: Enforces strict timeouts on LLM calls to prevent UI hanging.
 
-Built as a Capstone Project demonstrating Python Proficiency & Systems Thinking.
+---
+*Built as a Capstone Project demonstrating Python Proficiency & Systems Thinking.*
