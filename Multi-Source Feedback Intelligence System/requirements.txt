@@ -1,0 +1,20 @@
+# Core Data Processing
+pandas>=2.2.0
+numpy>=1.26.4
+matplotlib==3.8.4
+
+# Database ORM
+SQLAlchemy>=2.0.25
+
+# Ingestion Adapters
+google-play-scraper>=1.2.4
+
+# NLP / Sentiment
+nltk>=3.8.1
+
+# Dashboard & Visualization
+streamlit>=1.31.0
+plotly>=5.18.0
+
+# Reporting
+fpdf2>=2.7.7
