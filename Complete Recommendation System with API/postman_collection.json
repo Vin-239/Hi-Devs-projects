@@ -1,0 +1,84 @@
+{
+	"info": {
+		"name": "RecSys Capstone API",
+		"description": "API endpoints for the Day 10 Recommendation Engine Capstone.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/health",
+					"protocol": "http",
+					"host": ["127", "0", "0", "1"],
+					"port": "5000",
+					"path": ["health"]
+				}
+			}
+		},
+		{
+			"name": "2. Get Metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/metrics",
+					"protocol": "http",
+					"host": ["127", "0", "0", "1"],
+					"port": "5000",
+					"path": ["metrics"]
+				}
+			}
+		},
+		{
+			"name": "3. Get Recommendations (Alice)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/recommend/u1?limit=5",
+					"protocol": "http",
+					"host": ["127", "0", "0", "1"],
+					"port": "5000",
+					"path": ["recommend", "u1"],
+					"query": [{"key": "limit", "value": "5"}]
+				}
+			}
+		},
+		{
+			"name": "4. Get Recommendations (Cold Start User)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/recommend/u4",
+					"protocol": "http",
+					"host": ["127", "0", "0", "1"],
+					"port": "5000",
+					"path": ["recommend", "u4"]
+				}
+			}
+		},
+		{
+			"name": "5. Submit Feedback",
+			"request": {
+				"method": "POST",
+				"header": [{"key": "Content-Type", "value": "application/json"}],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uid\": \"u1\",\n    \"cid\": \"c12\",\n    \"rating\": 5.0\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/feedback",
+					"protocol": "http",
+					"host": ["127", "0", "0", "1"],
+					"port": "5000",
+					"path": ["feedback"]
+				}
+			}
+		}
+	]
+}
